@@ -48,6 +48,7 @@ export async function createOrder(product) {
             checkout: 'https://www.example.com/checkout.html',
             confirmation: `${process.env.CONFIRMATION_URL}?order_id={checkout.order.id}`,
             push: 'https://www.example.com/api/push'
+            //nabil
         }
     };
     const body = JSON.stringify(payload);
