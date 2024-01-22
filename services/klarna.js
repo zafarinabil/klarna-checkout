@@ -52,6 +52,8 @@ export async function createOrder(product) {
 			push: 'https://www.example.com/api/push?order_id={checkout.order.id}'
 		}
 	};
+	console.log('Confirmation URL:', `${process.env.CONFIRMATION_URL}?order_id={checkout.order.id}`);
+
 
 	const body = JSON.stringify(payload);
 	const response = await fetch(url, { method, headers, body });
